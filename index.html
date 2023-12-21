@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Training</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lato:wght@400;900&family=Sofia+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+     <img src="/media/Logo.png" alt="">        
+      <h1>For Individuals</h1>
+      <p class="large_screen">Start benefiting from the wellness experience. For <br> companies looking on increasing productivity, and improving <br>organization wellness.</p>
+      <p class="mobile_screen">Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.</p>
+    </div>
+    <div class="form_container">
+      <form action="submit" method="post">
+        <div class="input_group">
+          <div class="input_box">
+            <label for="first_name">
+              First Name
+              <input type="text" id="first_name" name="first_name" placeholder="Tolu">
+            </label>
+          </div>
+          <div class="input_box">
+            <label for="last_name">
+              Last Name
+              <input type="text" id="last_name" name="last_name">
+            </label>
+          </div>
+        </div>
+        <div class="input_group">
+          <div class="input_box">
+            <label for="gender">
+              Gender
+            </label>
+            <select class="only_you" id="gender" name="gender">
+              <option value="">Select here</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Other</option>
+            </select>
+          </div>
+          <div class="input_box">
+            <label for="dob">
+             Date of Birth
+             <input type="date" id="dob" name="dob" placeholder="Select here">
+            </label>
+          </div>
+        </div>
+          <div class="input_group">
+            <div class="input_box">
+              <label for="weight">
+                Weight(KG)
+                <input type="text" name="weight" id="weight" placeholder="Enter Weight">
+              </label>
+            </div>
+            <div class="input_box">
+              <label for="height">
+                Height(CM)
+                <input type="text" name="height" id="height" placeholder="Enter height here..">
+              </label>
+            </div>
+          </div>
+          <div class="long_input">
+          <label for="activity_level">
+            Activity Level
+            </label>
+            <select name="activity_level" id="activity_level">
+              <option value="">Select here</option>
+            </select>
+          </div>
+          <div class="long_input">
+            <label for="password">
+              Password
+            </label>
+              <input class="password" type="password" name="password" id="password" >
+          </div>
+          <button type="submit">Register</button>
+          <p class="tc_large_screen">By clicking Register, you agree to our <a href="">Terms of Use</a> and our <a href="">Privacy Policy</a></p>
+        </form>
+      </div>
+      <p class="tc_mobile_screen">By clicking Register, you agree to our <a href="">Terms of Use</a> and our <a href="">Privacy Policy</a></p>
+  </div>
+</body>
+</html>

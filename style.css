@@ -1,0 +1,215 @@
+/* josh comeau CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Sofia Sans', sans-serif;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/* main css */
+div.wrapper{
+  min-block-size: 25ch;
+  inline-size: 100%;
+  max-inline-size: 1440px;
+  background: hsla(170, 60%, 98%, 1);
+  box-sizing: border-box;
+  padding-inline: 24px;
+}
+div.container h1{
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsla(174, 100%, 2%, 1);
+}
+div.container{
+width: 100%;
+max-width: 460px;
+}
+.wrapper div.form_container{
+  background-color: hsla(0, 0%, 100%, 1);
+  border-radius: 6px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  padding-block-start: 40px;
+  padding-block-end: 40px;
+  box-shadow: 0px 4px 50px 0px hsla(222, 68%, 4%, 0.1);
+}
+div.form_container::placeholder{
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+div.form_container input, select{
+  color: hsla(208, 96%, 10%, 1);
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid hsla(0, 0%, 94%, 1);
+  border-radius: 2px;
+  padding-inline-start: 1rem;
+  
+  &:focus-within{
+    border: 3px solid hsla(174, 62%, 47%, 1);
+    box-shadow: 0px 4px 50px 0px hsla(222, 68%, 4%, 0.1);
+    outline: 4px solid hsla(174, 62%, 90%, 1);
+  }
+  &:hover{
+    border: 3px solid hsla(174, 62%, 47%, 1);
+    box-shadow: 0px 4px 50px 0px hsla(222, 68%, 4%, 0.1);
+    outline: 4px solid hsla(174, 62%, 90%, 1);
+  }
+}
+
+
+.form_container div.input_box{
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+div.form_container div.input_group input, select{
+  width: 100%;
+  height: 48px;
+}
+div.form_container .long_input{
+  width: 100%;
+  padding-block-end: 30px;
+}
+input, select, button{
+  width: 100%;
+  height: 48px;
+}
+div.form_container label{
+  color: hsla(208, 96%, 10%, 1);
+  font-weight: 600;
+  font-size: 1rem;
+}
+div.form_container button{
+  margin-block-end: 1rem;
+  background: hsla(174, 62%, 47%, 1);
+  border: 0;
+  color: hsla(0, 0%, 100%, 1);
+  font-size: 1rem;
+  font-weight: 600;
+   border-radius: 4px;
+}
+div.wrapper p.tc_mobile_screen{
+  padding-block-start: 24px;
+  padding-block-end: 64px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  a{
+    color: 
+    hsla(174, 62%, 47%, 1);
+  }
+}
+div.wrapper p.tc_large_screen{
+  padding-block-start: 24px;
+  padding-block-end: 64px;
+  width: 100%;
+  max-width: 463px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color:  hsla(0, 0%, 0%, 1);
+  a{
+    color: 
+    hsla(174, 62%, 47%, 1);
+  }
+}
+div.container p.mobile_screen{
+  color: hsla(0, 0%, 45%, 1);
+  font-size: 1rem;
+  font-weight: 300;
+}
+div.container p.large_screen{
+  color: hsla(0, 0%, 45%, 1);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* media queries */
+@media screen and (min-width:900px) {
+  div.wrapper{
+    display: flex;
+    justify-content: space-between;
+    min-block-size: 25ch;
+    inline-size: 100%;
+    max-inline-size: 1440px;
+    background: hsla(170, 60%, 98%, 1);
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding-inline: 140px;
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+  }
+  .form_container div.input_group{
+    display: flex;
+  }
+  div.form_container div.input_group input, .only_you{
+    max-width: 238px;
+    width: 100%;
+    height: 48px;
+  }
+  div.form_container .long_input{
+    width: 100%;
+    padding-block-end: 30px;
+  }
+  div.wrapper .tc_mobile_screen{
+    display: none;
+  }
+  .wrapper div.form_container{
+    max-width: 580px;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 1);
+    border-radius: 6px;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+  }
+  div.container .mobile_screen{
+    display: none;
+  }
+}
+/* mobile  */
+@media screen and (max-width:900px){
+  div.wrapper p.tc_large_screen{
+    display: none;
+    padding-block-start: 24px;
+    padding-block-end: 64px;
+    width: 100%;
+    max-width: 463px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  div.container p.large_screen{
+    display: none;
+    color: hsla(0, 0%, 45%, 1);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  div.wrapper img{
+  max-width: 4.8rem;
+  height: 5rem;
+  padding-block-start: 30px;
+  margin-block-end: 50px;
+}
+
+}
